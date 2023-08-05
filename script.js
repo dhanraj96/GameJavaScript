@@ -16,9 +16,13 @@ let highscore = 0;
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
+if(guess>20)
+{
+  document.querySelector('.message').textContent = 'Insert number between 1 and 20!';
 
   //When there is no input
-  if (!guess) {
+}
+  else if (!guess) {
     document.querySelector('.message').textContent = 'No number!';
 
     //When player win
